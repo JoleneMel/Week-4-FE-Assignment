@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO APP</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    
+</head>
+
+    <!-- heres what our to do interface will look like, we want 
+    1. A section where a user can insert a new to do and it to a table 
+
+    but also we want tobe able to have in that table a place where a to do item can be deleted once completed!!!  -->
+
+    <!-- To start lets start with a form that the user will be able to input a new to do list, and within that form we will be taking full advantage of bootstrap
+    and we are going to use a card in it and it will have a row with multiple colums  -->
+
+    <!-- we will first set the body class="container"  -->
+<body class="container">
+    <!-- <img src="gray.floaty.dancer.png" height="300px"> <img src="purple.queen.png" height="300px"> <img src="Ring.Ling.png" height="300px"> -->
+    <h2>Cryptid Hunters Inc.</h2>
+    <br>
+
+    <!-- then we will then create a new div, and this div will be our card again card is a bootstrap component and add some style to start!  -->
+    <div class="card">
+    <!-- We will then create a card body that will hold the bulk of our content -->
+    <div class="card-body">
+        <div class="row">
+            <!-- Then we will house all of out colums within here we will have them be all the same length so they will not hold a number.  -->
+            <div class="col-sm">
+                <!-- then within here we will add another div and this one going to start to use form group, cuz of the way that it formats it.  -->
+                <div class="form-group">
+                    <!-- Then we create a label  -->
+                    <label for="new-start-date">First Sighting Date</label>
+                    <!-- Then below we will input the input that inputs the start date.  -->
+                    <input type="date" class="form-control" id="new-start-date">
+                </div>
+                    <!-- So this 2nd colum is going to be for the end date  -->
+            </div>
+            <!-- We will copy it twice  -->
+            <div class="col-sm">
+                <div class="form-group">
+                    <!-- Then we create a label  -->
+                    <label for="new-end-date">Capture Due Date</label>
+                    <!-- Then below we will input the input that inputs the start date.  -->
+                    <input type="date" class="form-control" id="new-end-date">
+                </div>
+            </div>
+        </div>
+        <!-- Below is where the information will be inputted/entered for the to do  -->
+        <div class="row">
+            <!-- then within this we will have a class for col-sm  -->
+            <div class="col-sm">
+                <div class="form-group">
+                    <!-- Then we create a label  -->
+                    <label for="new-task">Cryptid</label>
+                    <!-- Since this is where the information is inputted we will need to change the input type to text and ids accordingly then we will 
+                    input a place holder as well   -->
+                    <input type="text" class="form-control" id="new-task" placeholder="Cryptid">
+                </div>
+            </div>
+            <!-- Then under this we will create our button, which will be id 'add' and we will be addin the id so it can be located by js later  -->
+            <!-- my button is different from the video but idc I like it better! -->
+            <button id="add" class="btn btn-primary form-control">Log</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- So down here we will create a table for our to dos to be added to accordingly and just like the other html elements we want to reference it to an id
+so it can be properly accesssed later on -->
+<!-- After the id we are going to use some bootstrap style elements to style it accordingly -->
+<table id="list" class="table table-dark table-striped">
+    <!-- now we will start with our table rows, and our table headers! -->
+    <tr>
+        <!-- for our headers we will create one for the task, date created, start date, end date and the actions; our actions will have our buttons
+             inside of it. -->
+        <th>Cryptid</th>
+        <th>Date Created</th>
+        <th>First Sighting Date</th>
+        <th>Capture Due Date</th>
+        <th>Actions</th>
+    </tr>
+</table>
+
+<!-- So now our html stage is set then we head over to our javascript file and help put our functionality in action! -->
+
+
+
+
+    <script src="index.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
