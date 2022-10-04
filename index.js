@@ -12,6 +12,7 @@ document.getElementById('add').addEventListener('click', () => {
     // Next we will need to get our table 
     let table = document.getElementById('list');
     // now we will create a new row, we will set it to the first posistion because the header is the "first" row which is 0
+    //If you want to have the row on the bottom just do let row = table.insertRow(-1); instead of 1
     let row = table.insertRow(1);
     // now we need to actually set the attributes for this row that we have created, first would be the id, and then we will use a template literal to get an 
     // id plus with a dash and the id from the first var above 
