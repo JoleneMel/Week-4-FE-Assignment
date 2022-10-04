@@ -37,7 +37,7 @@ document.getElementById('add').addEventListener('click', () => {
 
 function createDeleteButton(id) {
     //below we are creating the button, then passing on its attributes with its className 
-    let btn = document.createElement('buttton');
+    let btn = document.createElement('button');
     btn.className = 'btn btn-primary';
     btn.id = id;
     btn.innerHTML = 'Captured';
