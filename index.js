@@ -27,7 +27,7 @@ document.getElementById('add').addEventListener('click', () => {
     //copy because the end date is basically the same code - some minor changes 
     row.insertCell(3).innerHTML = document.getElementById('new-end-date').value;
     //now to create the button within the action part, starting with assigning the actions to a variable 
-    let = actions = row.insertCell(4);
+    let actions = row.insertCell(4);
     //append is like add in a way, creating a function to create a delete button, you pass in the current id, and incremented so all ids are unique to a task 
     actions.appendChild(createDeleteButton(id++));
     //this is to ensure it starts over for a good user experience 
